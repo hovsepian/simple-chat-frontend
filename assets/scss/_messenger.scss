@@ -1,0 +1,235 @@
+.messenger{
+  display: flex;
+  margin-bottom: 4rem;
+  .chats{
+    flex: 0 0 350px;
+    padding-right: 2rem;
+    display: flex;
+    flex-direction: column;
+    .box{
+      overflow: auto;
+      max-height: 400px;
+
+      &:not(:last-child){
+        margin-bottom: 1rem;
+      }
+
+
+      .chat-list{
+        .chat-item{
+          display: flex;
+          align-items: center;
+          padding: 0.5rem 0;
+          transition: all 0.2s;
+          padding-left: 1rem;
+          border: 1px solid transparent;
+          cursor: pointer;
+
+          &.nuxt-link-active{
+            background: #f3f4f6ad;
+            border: 1px solid #f3f4f6ad;
+            border-radius: 25px;
+          }
+
+          .icon{
+            flex: 0 0 20px;
+            margin-right: 1rem;
+            text-align: center;
+          }
+        }
+      }
+
+      .create-room{
+        margin-bottom: 1rem;
+        input{
+          width: 100%;
+          height: 35px;
+          outline: none;
+          border-radius: 5px;
+          border: 1px solid #e5e6e7;
+          padding: 0 15px;
+        }
+        button{
+          display: none;
+        }
+      }
+    }
+  }
+
+  .block-title{
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    i{
+      font-size: 20px;
+      cursor: pointer;
+    }
+  }
+
+  .message-box{
+    flex: 1 1 100%;
+
+    .messages{
+      margin-bottom: 1rem;
+
+      .box{
+        &.messages{
+          height: 600px;
+        }
+
+        &.add-user{
+          margin-bottom: 1rem;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          .icon-user-plus{
+            cursor: pointer;
+          }
+        }
+
+        .scrollbar{
+          height: 100%;
+          overflow: auto;
+          padding-left: 1rem;
+          padding-right: 1rem;
+          border-radius: 5px;
+          box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1),0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        }
+
+        .message{
+          display: flex;
+          justify-content: flex-end;
+          margin-bottom: 1rem;
+
+          &:first-child{
+            margin-top: 1rem;
+          }
+
+          .icon-user{
+            flex: 0 0 30px;
+            height: 30px;
+            background: #e5e6e7;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            order: 2;
+          }
+          .msg{
+            max-width: 70%;
+            margin-right: 0.5rem;
+            order: 1;
+            .text{
+              background: $brand-color;
+              color: #fff;
+              border-radius: 25px;
+              padding: 0.5rem 1rem;
+              line-height: 20px;
+            }
+            .author{
+              font-size: 11px;
+              color: #ccc;
+              margin-right: 5px;
+              margin-top: 3px;
+              text-align: right;
+              cursor: pointer;
+              display: none;
+              &:hover{
+                text-decoration: underline;
+              }
+            }
+          }
+
+          &.interlocutor{
+            justify-content: flex-start;
+
+            .icon-user{
+              order: 1;
+            }
+            .text{
+              order: 2;
+              margin-left: 0.5rem;
+              background: #e5e6e7;
+              color: #333;
+            }
+            .author{
+              text-align: left;
+              margin-left: 10px;
+              display: block;
+            }
+          }
+        }
+      }
+    }
+
+    .send-message{
+      .box{
+        form{
+          display: flex;
+          input{
+            flex: 1 1 100%;
+            border-radius: 25px 0 0 25px;
+            outline: none;
+            border: 1px solid #ccc;
+            border-right: 0;
+            padding: 0 15px;
+            font-size: 1rem;
+          }
+          button{
+            flex: 0 0 50px;
+            height: 50px;
+            border: 1px solid #ccc;
+            border-left: 0;
+            border-radius: 0 25px 25px 0;
+            cursor: pointer;
+            font-size: 18px;
+            background: none;
+          }
+        }
+      }
+    }
+  }
+
+  .room-users{
+    flex: 0 0 250px;
+    margin-left: 2rem;
+    max-height: 80vh;
+    overflow: auto;
+  }
+
+  .add-room-user{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .users{
+      max-width: 1200px;
+      max-height: 90vh;
+      overflow: auto;
+      width: 100%;
+      margin: auto;
+      background: #fff;
+      padding: 2rem;
+
+      .box{
+        cursor: pointer;
+      }
+
+      .start-chat{
+        display: none;
+      }
+    }
+  }
+}

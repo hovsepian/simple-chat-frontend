@@ -1,0 +1,50 @@
+{
+  "_from": "feather-webfont",
+  "_id": "feather-webfont@4.22.3",
+  "_inBundle": false,
+  "_integrity": "sha512-BKwf9CGbLSqtSANh3YhNbaodxTRmpCni0r+DdFKBQ16llyjQQ19nkfMZAlMdPzLqYBh9nKy1bxVfnOrzQAwzuA==",
+  "_location": "/feather-webfont",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "feather-webfont",
+    "name": "feather-webfont",
+    "escapedName": "feather-webfont",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/feather-webfont/-/feather-webfont-4.22.3.tgz",
+  "_shasum": "5cdde94ffe3b6e7b035c9435313760b09645aeac",
+  "_spec": "feather-webfont",
+  "_where": "C:\\OpenServer\\domains\\hitabs-v2\\web",
+  "author": {
+    "name": "niklauslee"
+  },
+  "bugs": {
+    "url": "https://github.com/niklauslee/feather-webfont/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "feather-icons": "^4.22.1"
+  },
+  "deprecated": false,
+  "description": "A webfont version of feather icons",
+  "devDependencies": {
+    "grunt": "^1.0.4",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-webfont": "^1.7.2"
+  },
+  "homepage": "https://github.com/niklauslee/feather-webfont#readme",
+  "name": "feather-webfont",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/niklauslee/feather-webfont.git"
+  },
+  "version": "4.22.3"
+}
